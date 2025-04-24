@@ -1,0 +1,55 @@
+=== NPShell Pipe Debug Log ===
+PARSED LINE: 1 segments, 1 units
+  Segment 0: 'removetag test.html' (unit boundary)
+[PID 954947] PARENT CREATED CHILD: fd=954948, PARENT
+[PID 954947] PARENT WAITING FOR: fd=954948, PARENT
+[PID 954948] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954948] removetag test.html: fd=-1, CHILD
+EXECUTING: cmd='removetag test.html', STDIN=0, STDOUT=1, STDERR=2
+[PID 954947] PARENT DONE WAITING: fd=954948, PARENT
+AFTER CLEANUP: num_pipes=0
+PARSED LINE: 1 segments, 1 units
+  Segment 0: 'removetag test.html ' (unit boundary)
+[PID 954947] PARENT CREATED CHILD: fd=954949, PARENT
+[PID 954947] PARENT WAITING FOR: fd=954949, PARENT
+[PID 954949] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954949] removetag test.html : fd=-1, CHILD
+EXECUTING: cmd='removetag test.html ', STDIN=0, STDOUT=1, STDERR=2
+[PID 954947] PARENT DONE WAITING: fd=954949, PARENT
+AFTER CLEANUP: num_pipes=0
+PARSED LINE: 2 segments, 2 units
+  Segment 0: 'removetag test.html ' (unit boundary)
+  Segment 1: ' removetag test.html ' (unit boundary)
+NEW NUMBERED PIPE: idx=0, count=2, read=4, write=5
+NUMBERED PIPE [idx=0, count=2]: CREATED NEW (read=4, write=5)
+NUMBERED PIPE: cmd='removetag test.html ', unit=0, target_unit=2, input_fd=-1
+[PID 954947] PARENT CREATED CHILD: fd=954950, PARENT
+[PID 954947] PARENT HAS OUTPUT: fd=5, PARENT
+[PID 954947] PARENT CLOSED OUTPUT: fd=5, PARENT
+[PID 954950] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954950] removetag test.html : fd=5, CHILD
+EXECUTING: cmd='removetag test.html ', STDIN=0, STDOUT=1, STDERR=2
+[PID 954947] PARENT CREATED CHILD: fd=954951, PARENT
+[PID 954947] PARENT WAITING FOR: fd=954951, PARENT
+[PID 954951] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954951]  removetag test.html : fd=-1, CHILD
+EXECUTING: cmd=' removetag test.html ', STDIN=0, STDOUT=1, STDERR=2
+[PID 954947] PARENT DONE WAITING: fd=954951, PARENT
+DECREASED PIPE COUNT: idx=0, new count=1
+AFTER CLEANUP: num_pipes=1
+PARSED LINE: 2 segments, 2 units
+  Segment 0: 'number ' (unit boundary)
+  Segment 1: ' number' (unit boundary)
+NUMBERED PIPE [idx=0, count=1]: REUSING EXISTING (read=4, write=5)
+NUMBERED PIPE: cmd='number ', unit=0, target_unit=1, input_fd=-1
+[PID 954947] PARENT CREATED CHILD: fd=954952, PARENT
+[PID 954947] PARENT HAS OUTPUT: fd=5, PARENT
+[PID 954947] PARENT CLOSED OUTPUT: fd=5, PARENT
+[PID 954952] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954952] number : fd=5, CHILD
+EXECUTING: cmd='number ', STDIN=0, STDOUT=1, STDERR=2
+[PID 954947] PARENT CREATED CHILD: fd=954953, PARENT
+[PID 954947] PARENT WAITING FOR: fd=954953, PARENT
+[PID 954953] CHILD BEFORE REDIRECTION: fd=-1, CHILD
+[PID 954953]  number: fd=-1, CHILD
+EXECUTING: cmd=' number', STDIN=0, STDOUT=1, STDERR=2
