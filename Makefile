@@ -1,12 +1,18 @@
-CC = gcc
-CFLAGS = -Wall -std=c11
-TARGET = npshell
-SRCS = npshell.c
+TARGET := npshell
 
+CXX := g++
+ifeq (/usr/bin/g++-11,$(wildcard /usr/bin/g++-11*))
+    CXX=g++-11
+endif
+
+CXXFLAGS := -std=c++17 -Wall -Wextra -g
+
+.PHONY: all
 all: $(TARGET)
 
-$(TARGET): $(SRCS)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRCS)
+%: %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
 
+.PHONY: clean
 clean:
-	rm -f $(TARGET)
+	rm -f *.o $(TARGET)
